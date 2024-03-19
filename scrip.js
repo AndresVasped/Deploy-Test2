@@ -96,9 +96,10 @@ botones.forEach(boton => //recorremos todos los botones
         {
             const resultado=calculaResultado(pantalla.textContent);//llamamos a la funcion calcula resultado y le pasamos como parametro el contenido de la pantalla
             pantalla.textContent=resultado;//mostramos en pantalla el resultado
-            if(resultado!= "Error")//si el resultado no es un numero
+            if(!isNaN(resultado) && typeof resultado !== "undefined")//si el resultado no es un numero
             {
                 historial.textContent+=`${resultado} ,`;//mostramos en historial el resultados
+                pantalla.textContent="ERROR";
             }
         }
         else
