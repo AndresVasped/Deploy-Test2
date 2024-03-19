@@ -98,7 +98,10 @@ botones.forEach(boton => //recorremos todos los botones
             pantalla.textContent=resultado;//mostramos en pantalla el resultado
             if(!isNaN(resultado) && typeof resultado !== "undefined")//si el resultado no es un numero
             {
-                historial.textContent+=`${resultado} ,`;//mostramos en historial el resultados
+                historial.textContent+=`${resultado} ,`;//mostramos en historial el resultados 
+            }
+            else
+            {
                 pantalla.textContent="ERROR";
             }
         }
