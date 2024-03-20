@@ -78,6 +78,11 @@ botones.forEach(boton => //recorremos todos los botones
 {
     boton.addEventListener("click", () =>{//para cada boton
         const valor = boton.textContent;//obtenemos el valor del boton
+
+        if(pantalla.textContent==="ERROR")
+        {
+            pantalla.textContent="";
+        }
         
         if(valor==="←")//si el usuario presiona el boton de borrar
         {
